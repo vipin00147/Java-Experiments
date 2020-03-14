@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Use_of_final
+{
+    int a;
+    void get()
+    {
+       Scanner obj=new Scanner(System.in); 
+       System.out.print("Enter the value of A : ");
+       a=obj.nextInt();
+    }
+    protected void finalize()
+    {
+        
+    }
+    public static void main(String arg[])
+    {
+        Use_of_final obj=new Use_of_final();
+        obj.get();
+        obj.finalize();
+    }
+}
