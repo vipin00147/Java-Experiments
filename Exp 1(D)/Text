@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Test
+{
+    public static void main(String arg[])
+    {
+        System.out.println("1st Arg : "+arg[0]);
+        System.out.println("2nd Arg : "+arg[1]);
+        int c;
+        int a=Integer.parseInt(arg[0]);
+        int b=Integer.parseInt(arg[1]);
+        c=a+b;
+        System.out.println("Sum is : "+c);
+    }
+}
