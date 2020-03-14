@@ -1,0 +1,25 @@
+class one {
+    int age;
+    one(int age){
+        this.age=age;
+        System.out.println("Age inside constructor: "+age);
+    }     
+}
+class two extends one{
+    String name;
+    two(String name,int age){
+        super(age);
+        this.name=name;
+        System.out.println("Name inside constructor: "+name);
+    }
+    void display(){
+        System.out.println("Name outside constructor: "+this.name);
+        System.out.println("Age outside constructor: "+this.age);
+    }
+}
+class data{
+    public static void main(String args[]){
+        two obj=new two("Vipin",19);
+        obj.display();
+    }
+}
