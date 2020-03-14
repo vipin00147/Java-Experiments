@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class Area
+{  
+    public static void main(String arg[])
+    {
+     System.out.println("Name : Shreya");
+     System.out.println("Roll : 1810992751");
+        Area obj=new Area();
+        obj.input();
+    }
+    void input()
+    {
+        Scanner a=new Scanner(System.in);
+        int side,s,l,b,area;
+        System.out.println("Enter Side of Square ");
+        s=a.nextInt();
+        side=square(s);
+        System.out.println("Side Of Square Is : "+side);
+        System.out.println("Enter length of rectangle : ");
+        l=a.nextInt();
+        System.out.println("Enter breadth of Rectangle : ");
+        b=a.nextInt();
+        area=rect(l,b);
+        System.out.println("Area of Rectangle is : "+area);
+    }
+    int square(int s)
+    {
+        return(s*s);
+    }
+    int rect(int l,int b)
+    {
+        return(l*b);
+    }
+}
