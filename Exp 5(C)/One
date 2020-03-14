@@ -1,0 +1,24 @@
+class One
+{
+    public static void main(String arg[])
+    {
+        System.out.println("Name : Shreya");
+     System.out.println("Roll : 1810992751");
+    One obj=new One();  
+    obj.get();
+    obj.get(6);
+    obj.get(2,4);
+    }
+    void get()
+    {
+        System.out.println("Without Perimeter : "+0);
+    }
+    void get(int a)
+    {
+       System.out.println("One Perimeter : "+a); 
+    }
+    void get(int a,int b)
+    {
+        System.out.println("Two Perimeter : "+a+" "+b);
+    }
+}
