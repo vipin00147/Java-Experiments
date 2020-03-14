@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class person
+{
+    String name;
+    person(String name)
+    {
+        this.name=name;
+    }
+}
+class Empid extends person
+{
+    int id;
+    Empid(String name,int id)
+    {
+        super(name);
+        this.id=id; 
+    }
+}
+class Empsalary extends Empid
+{
+    int salary;
+    Empsalary(String name,int id,int salary)
+    {
+        super(name,id);
+        this.salary=salary;
+    }
+    void display()
+    {
+        System.out.println("Name is : "+name);
+        System.out.println("Id is : "+id);
+        System.out.println("Salary is : "+salary);
+    }
+}
+class output extends Empsalary
+{
+    output(String name,int id,int salary)
+    {
+        super(name,id,salary);
+    }
+    public static void main(String arg[])
+    {
+        output obj=new output("Vipin",12,76000);
+        obj.display();
+    }
+}
