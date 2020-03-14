@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Test
+{
+    public static void main(String arg[])
+    {
+       System.out.println("Name : Vipin");
+       System.out.println("Roll : 1810992754");
+       Scanner input=new Scanner(System.in);
+       int a,b;
+       int add,mul,sub,div,mod;
+       System.out.println("Enter any Two Number");
+       a=input.nextInt();
+       b=input.nextInt();
+       add=a+b;
+       mul=a*b;
+       sub=a-b;
+       div=a/b;
+       mod=a%b;
+       System.out.println("Addition is : "+add);
+       System.out.println("Subtraction is : "+sub);
+       System.out.println("Multiply is : "+mul);
+       System.out.println("Division is : "+div);
+       System.out.println("Modulus is : "+mod);  
+    }
+}
