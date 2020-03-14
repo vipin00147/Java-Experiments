@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Digit
+{
+    public static void main(String arg[])
+    {
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int sum=0,t;
+        while(n!=0)
+        {
+            t=n%10;
+            sum+=t;
+            n=n/10;
+        }
+        System.out.println("Sum of Digit is : "+sum);
+    }
+}
