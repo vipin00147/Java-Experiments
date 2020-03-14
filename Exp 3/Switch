@@ -1,0 +1,59 @@
+import java.util.Scanner;
+class Switch
+{
+    public static void main(String arg[])
+    {
+        System.out.println("1 : To check whether a no. is even or odd");
+        System.out.println("2 : To check whether a no. is Prime or Not");
+        System.out.println("3 : To check whether a no. is palindrome or not");
+        Scanner obj=new Scanner(System.in);
+        int choice=obj.nextInt();
+        int count=0,t,rev,temp;
+        
+        switch(choice)
+           {
+            case 1:
+            {
+              int n=obj.nextInt();
+               if(n%2==0)
+                   System.out.println("Entered Number Is Even");
+               else
+                   System.out.println("Entered Number Is Odd");
+               break;
+            }
+            case 2:
+            {
+                int n=obj.nextInt();
+               for(int i=1;i<=n;i++)
+               {
+                   if(n%i==0)
+                   {
+                       count++;
+                   }
+               }
+               if(count==2)
+                   System.out.println("Entered Number Is Prime");
+               else
+                   System.out.println("Entered Number Is Not Prime");
+               break;
+            }
+            case 3:
+            {
+                int n=obj.nextInt();
+                rev=0;
+                temp=n;
+                while(n!=0)
+                {
+                    t=n%10;
+                    rev=rev*10+t;
+                    n/=10;
+                }
+                if(rev==temp)
+                    System.out.println("Entered Number Is Pallindrome");
+                else
+                    System.out.println("Entered Number Is Not Pallindrome");
+                break;
+            }
+           }
+    }                 
+}
