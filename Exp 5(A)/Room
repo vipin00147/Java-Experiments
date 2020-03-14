@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class Room
+{
+    Scanner input=new Scanner(System.in);
+    static int length,breadth,height;
+    static int a,v,p;
+    public static void main(String arg[])
+    {
+     System.out.println("Name : Shreya");
+     System.out.println("Roll : 1810992751");
+       Room obj=new Room();
+       obj.get();
+       obj.area();
+       obj.volume();
+       obj.perimeter();
+       obj.display();
+    }
+    void get()
+    {
+        System.out.println("Enter length,breadth and height");
+        length=input.nextInt();
+        breadth=input.nextInt();
+        height=input.nextInt();
+    }
+    void area()
+    {
+        a=length*breadth;
+    }
+    void volume()
+    {
+        v=length*breadth*height;
+    }
+    void perimeter()
+    {
+        p=2*(length+breadth);
+    }
+    void display()
+    {
+        System.out.println("Area of Rectangle : "+a);
+        System.out.println("Volume of Rectangle : "+v);
+        System.out.println("Perimeter of Rectangle : "+p);
+    }
+}
