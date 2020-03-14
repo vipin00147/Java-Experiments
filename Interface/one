@@ -1,0 +1,26 @@
+interface two
+{
+   int a=10;
+   int b=10;
+   void  get();
+   void display();
+}
+class one implements two
+{
+    int a=10,b=10;
+    public void get()
+    {
+        a=two.a+a;
+        b=two.b+b;
+    }
+    public void display()
+    {
+        System.out.println("A : "+a+" B : "+b);
+    }
+    public static void main(String arg[])
+    {
+        one obj=new one();
+        obj.get();
+        obj.display();
+    }
+}
