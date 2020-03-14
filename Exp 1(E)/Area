@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Area
+{
+    public static void main(String arg[])
+    {
+       System.out.println("Name : Vipin");
+       System.out.println("Roll : 1810992754");
+       int r,side,l,b;
+       double a_cir,a_rect,a_squ;
+       double p_cir,p_rect,p_squ;
+       Scanner input=new Scanner(System.in);
+       System.out.println("Enter Radius Of Circle : ");
+       r=input.nextInt();
+       a_cir=3.14*r*r;
+       p_cir=2*3.14*r;
+       System.out.println("Enter Side Of Square : ");
+       side=input.nextInt();
+       a_squ=side*side;
+       p_squ=4*side;
+       System.out.println("Enter Length and breadth of Rectangle : ");
+       l=input.nextInt();
+       b=input.nextInt();
+       a_rect=l*b;
+       p_rect=2*(l+b);
+       System.out.println("Area of Circle : "+a_cir);
+       System.out.println("Area of Squaer : "+a_squ);
+       System.out.println("Area of Rectangle : "+a_rect);
+       System.out.println("Parameter of Circle : "+p_cir);
+       System.out.println("Parameter of Square : "+p_squ);
+       System.out.println("Parameter of Circle : "+p_rect);
+    }
+}
