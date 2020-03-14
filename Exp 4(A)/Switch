@@ -1,0 +1,146 @@
+import java.util.Scanner;
+class Switch
+{
+    public static void main(String arg[])
+    {
+        System.out.println("1 : Search And Sort");
+        System.out.println("2 : Perform addition and multiplication of matrices.");
+        System.out.println("3 : Find transpose of the entered matrix");
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Enter Your choice");
+        int choice=obj.nextInt();
+        switch(choice)
+        {
+            case 1:
+            {
+              int arr[] = new int[10];
+              System.out.println("Enter Size of array");
+              int n=obj.nextInt();
+              int num,temp;
+              for(int i=0;i<n;i++)
+              {
+                  arr[i]=obj.nextInt();
+              }
+              System.out.println("Which number you want to search");
+              num=obj.nextInt();
+              for(int i=0;i<n;i++)
+              {
+                  if(arr[i]==num){
+                  System.out.println("Number is found at arr["+i+"]");
+                  break;}
+              }
+              for(int i=0;i<n-1;i++)
+              {
+                  for(int j=0;j<n-1;j++)
+                  {
+                      if(arr[j]>arr[j+1])
+                      {
+                          temp=arr[j];
+                          arr[j]=arr[j+1];
+                          arr[j+1]=temp;
+                      }
+                  }
+              }
+              System.out.println("Sorted array is :");
+              for(int i=0;i<n;i++)
+              {
+                  System.out.print(" "+arr[i]);
+              }  
+              break;
+            }
+            case 2:
+            {
+                int a[][] = new int[10][10];
+                int b[][] = new int[10][10];
+                int c[][] = new int[10][10];
+                System.out.println("Enter value of r1 and c1");
+                int r1=obj.nextInt();
+                int c1=obj.nextInt();
+                System.out.println("Enter value of r2 and c2");
+                int r2=obj.nextInt();
+                int c2=obj.nextInt();
+                System.out.println("Enter Elements of 1st Matrix");
+                for(int i=0;i<r1;i++)
+                {
+                for(int j=0;j<c1;j++)
+                 {
+                   a[i][j]=obj.nextInt();
+                 }
+                }
+                System.out.println("Enter Elements of 2nd Matrix");
+                for(int i=0;i<r2;i++)
+                {
+                for(int j=0;j<c2;j++)
+                 {
+                   b[i][j]=obj.nextInt();
+                 }
+                }
+               if(r1==r2 && c1==c2)
+               {
+                   for(int i=0;i<r1;i++)
+                   {
+                       for(int j=0;j<c1;j++)
+                       {
+                          c[i][j]=a[i][j]+b[i][j]; 
+                       }
+                   }
+                   System.out.println("Addition is : ");
+                  for(int i=0;i<r1;i++)
+                   {
+                       for(int j=0;j<c1;j++)
+                       {
+                          System.out.print(" "+c[i][j]); 
+                       }
+                       System.out.println();
+                   }
+                  for(int i=0;i<r1;i++)
+                  {
+                      for(int j=0;j<c1;j++)
+                      {
+                          c[i][j]=0;
+                          for(int k=0;k<c2;k++)
+                          {
+                              c[i][j]+=a[i][k]*b[k][j];
+                          }
+                      }
+                  }
+                  System.out.println("Multiplication is : ");
+                  for(int i=0;i<r1;i++)
+                  {
+                      for(int j=0;j<c2;j++)
+                      {
+                          System.out.print(" "+c[i][j]);
+                      }
+                      System.out.println();
+                  }
+               }
+               break;
+            }
+            case 3:
+            {
+                int arr[][]=new int[10][10];
+                System.out.println("Enter Row And Coloumn :");
+                int r1=obj.nextInt();
+                int c1=obj.nextInt();
+               System.out.println("Enter Elements : "); 
+               for(int i=0;i<r1;i++)
+               {
+                   for(int j=0;j<c1;j++)
+                   {
+                      arr[i][j]=obj.nextInt();
+                   }
+               }
+               System.out.println("Transpose is : ");
+               for(int i=0;i<r1;i++)
+               {
+                   for(int j=0;j<c1;j++)
+                   {
+                       System.out.print(" "+arr[j][i]);
+                   }
+                   System.out.println();
+               }
+               break;
+            }
+        }
+    }
+}
