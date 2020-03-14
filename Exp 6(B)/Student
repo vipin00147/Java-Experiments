@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Student
+{
+    static String college_name="Chitkara University";
+     String course;
+     int roll,marks[]=new int[4],avg;
+     int sum=0;
+     void get()
+    {
+        sum=0;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter Your Course name : ");
+        course=input.next();
+        System.out.println("Enter Your Roll No : ");
+        roll=input.nextInt();
+        System.out.println("Enter Your marks : ");
+        for(int i=0;i<4;i++)
+        {
+            marks[i]=input.nextInt();
+        }
+        for(int i=0;i<4;i++)
+        {
+            sum=sum+marks[i];
+        }
+        avg=sum/4;
+    }
+     void display()
+    {
+        System.out.println("College Name : "+college_name);
+        System.out.println("Course is : "+course);
+        System.out.println("Avg of Marks : "+avg);
+        System.out.println("Roll No : "+roll);
+        System.out.println();
+    }
+    public static void main(String arg[])
+    {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the number of Students : ");
+        int n=input.nextInt();
+        Student obj[]=new Student[50];
+        for(int i=0;i<n;i++)
+        {
+          obj[i]=new Student();
+          obj[i].get();
+        }
+        for(int i=0;i<n;i++)
+        {
+          obj[i].display();
+        }
+    }
+}
