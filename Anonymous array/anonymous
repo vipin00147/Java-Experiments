@@ -1,0 +1,16 @@
+class anonymous
+{
+    static int sum=0;
+    public static void main(String arg[])
+    {
+      sum(new int[]{1,2,3,4});
+    }
+    public static void sum(int a[])
+    {
+        for(int i:a)
+        {
+           sum=sum+i; 
+        }
+        System.out.println("Total is "+sum);
+    }
+}
