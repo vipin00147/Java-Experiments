@@ -1,0 +1,8 @@
+class Sample1
+{  
+    public static void main(String arg[])
+    {
+        Sample1 obj = new Sample1();
+        System.out.println(obj instanceof Sample1);
+    }
+}
